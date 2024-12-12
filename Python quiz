@@ -1,0 +1,55 @@
+import os
+import time
+
+def parabens():
+	print("obrigada por jogar.")
+
+def fase3():
+	print("qual a capital da alemanha?")
+	res3 = input(":")
+	if res3 == "berlin":
+		print("parabens.")
+		time.sleep(1)
+		os.system("clear")
+		parabens()
+	else:
+		print("não foi dessa vez.")
+		time.sleep(1)
+		os.system("clear")
+		fase3()
+		
+def fase2():
+	print("qual o estado mais rico do brasil(pib)")
+	res2 = input(":")
+	if res2 == "são paulo":
+		print("parabens.")
+		time.sleep(1)
+		os.system("clear")
+		fase3()
+	else:
+		print("não foi dessa vez.")
+		time.sleep(1)
+		os.system("clear")
+		fase2()
+
+def fase1():
+	print("capital do brasil?")
+	res1 = input(":")
+	if res1 == "brasilia":
+		print("parabens.")
+		time.sleep(1)
+		os.system("clear")
+		fase2()
+	else:
+		print("não foi dessa vez.")
+		time.sleep(1)
+		os.system("clear")
+		fase1()
+
+print("quiz basico python, escreva sim para começar")
+start = input(":")
+if start == "sim":
+	os.system("clear")
+	fase1()
+else:
+	print("programa encerrado")
